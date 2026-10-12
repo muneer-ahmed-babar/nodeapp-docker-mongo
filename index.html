@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body { text-align: center; }
+        form { border: 2px solid grey; border-radius: 8px; display: inline-block; padding: 2rem; text-align: left; }
+        label { display: block; margin-bottom: 0.5rem; }
+        #formBtn {
+            color: white;
+            background-color: cornflowerblue;
+            border: none;
+            border-radius: 2px;
+            padding: 0.25rem 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi User, Welcome to our App!</h1>
+    <p>You can sign up to the platform to access all important notifications.</p>
+    <!-- Form sends a POST request to /addUser -->
+    <form action="/addUser" method="POST">
+        <label>Email: <input type="email" name="email" placeholder="johndoe@email.com" required></label>
+        <label>Username: <input type="text" name="username" placeholder="John Doe" required></label>
+        <label>Password: <input type="password" name="password" placeholder="password" required></label>
+        <button type="submit" id="formBtn">Sign up</button>
+    </form>
+</body>
+</html>
